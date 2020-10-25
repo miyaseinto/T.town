@@ -1,0 +1,58 @@
+.top-page-header {
+  width: 100vw;
+  padding: 2vh 5vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  position: absolute;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.contet{
+  display: flex;
+}
+
+.t-icon {
+  width: 2vw;
+}
+
+.logo {
+  color: #99ccf2;
+  font-size: 25px;
+}
+
+.gest{
+  display: flex;
+  align-items: center;
+}
+
+.log{
+  display: flex;
+  align-items: center;
+}
+
+.notice{
+  display: flex;
+  align-items: center;
+}
+
+.gest_i{
+  font-size: 30px;
+  color: #99ccf2;
+  margin-right: 3vw;
+}
+
+.log_i{
+  font-size: 30px;
+  color: #99ccf2
+}
+
+.notice_i{
+  font-size: 30px;
+  color: #99ccf2;
+  margin-left: 3vw;
+}
