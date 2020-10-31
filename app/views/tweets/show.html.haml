@@ -1,15 +1,14 @@
-%header.top-page-header
-  %span.header-logo
+.top-page-header1
+  .header-logo
     = link_to image_tag("T.png", class:"t-icon"), "/"
-    %span.logo .town
+    %p.logo .town
   .contet
-    %span.gest
+    %p.gest
       = link_to "#", class: "gest_i" do
         = icon("fas fa-user-edit", class: "gest-icon")
-    %span.log
-      = link_to "#", class: "log_i" do
+    %p.log
+      = link_to(new_tweet_path,class: "log_i") do
         = icon("far fa-paper-plane", class: "log-icon")
     %span.notice
       = link_to "#", class: "notice_i" do
         = icon("far fa-bell", class: "notice-icon")
-    
