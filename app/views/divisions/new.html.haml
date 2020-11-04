@@ -1,0 +1,19 @@
+= render 'header'
+
+.Dibision
+  .Dibision__text
+    = icon("far fa-comment-dots", class:"titel-icon")
+    行政相談メッセージ
+  .Dibision__form
+    = form_with(model: @item, local: true) do |f|
+      .Dibision__form__main
+        選択したい課 ：
+        = f.text_field :hoge,class:"dicision-form"
+      .Dibision__form__member
+        メンバー：
+        -# = f.text_field :hoge,class:"member-form"
+      .Dibision__form__submit
+        = f.submit "登 録", class: 'submit-form'
+      
+
+        

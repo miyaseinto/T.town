@@ -10,4 +10,7 @@ class TweetsController < ApplicationController
   def show
     @tweet = Tweet.new
   end
+
+  def edit
+  end
 end

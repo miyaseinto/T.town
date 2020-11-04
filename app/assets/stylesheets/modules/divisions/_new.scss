@@ -1,0 +1,58 @@
+.Dibision{
+  width: 70vw;
+  height: 70vh;
+  margin: 70px auto;
+  &__text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(204, 204, 204);
+    font-size: 40px;
+    .titel-icon{
+      padding-right: 30px;
+    }
+  }
+  &__form{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 30px;
+    color: rgb(204, 204, 204);
+    &__main{
+      display: flex;
+      align-items: center;
+      width: 70vw;
+      .dicision-form{
+        padding: 10px;
+        width: 80%;
+      }
+    }
+    &__member{
+      display: flex;
+      align-items: center;
+      border-bottom:3px solid rgb(204, 204, 204) ;
+      width: 70vw;
+      line-height: 50px;
+      margin-top: 80px; 
+      .member-form{
+        border-style: none;
+        width: 87%;
+        line-height: 50px;
+      }
+    }
+    &__submit{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 80px;
+      .submit-form{
+        padding: 20px 80px;
+        background-color: #d7ebfa;
+        box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+        border-style: none;
+        cursor: pointer;
+        color: #99ccf2;
+      }
+    }
+  }
+}

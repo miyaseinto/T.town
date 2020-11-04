@@ -1,0 +1,33 @@
+= render 'divisions/header'
+
+.Tweet
+  .Tweet__text
+    = icon("fas fa-bell", class: "notice-icon")
+    %h1 町のお知らせ
+  .Tweet__content
+    .Tweet__content__left
+      .Tweet__content__left__text
+        %span 条件で絞り込み
+      .Tweet__content__left__search
+        = form_with(model: @item, local: true) do |f|
+          .Form__input
+            = f.text_field :hoge,placeholder: "キーワードを入力",class:"tweet-search"
+            = button_tag type: 'submit', class: "tweet-search-btn" do
+              = icon('fas', 'search')
+      .Tweet__content__left__tag
+        -# - @tags.each do |tag|
+        -#   = link_to posts_c_index_path(tag_name: tag) do
+        -#     .tag
+        -#       = tag
+    .Tweet__content__right
+      .Tweet__content__right__text
+        %span お知らせ投稿一覧
+      .Tweet__content__right__tweet
+      .Tweet__content__right__tweet
+      .Tweet__content__right__tweet
+      -# - if @posts.empty?
+      -#   = render "layouts/empty"
+      -# - else
+      -#   .Post_index
+      -#     - @posts.each do |post|
+      -#       = render 'post'

@@ -1,13 +1,5 @@
-.top-page-header1{
-  background-color: #ffff80;
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
-  width: 100vw;
-  padding: 2vh 5vw;
-  display: flex;
-  justify-content: space-between;
-}
+// tweetのnewとeditのView用
 .Wrapper{
-  height: calc(100vh - 60px);
   &__inner{
     margin: 0 auto;
     width: 880px;

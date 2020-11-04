@@ -1,19 +1,15 @@
 .top-page-header {
+  background-color: #ffff80;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
   width: 100vw;
   padding: 2vh 5vw;
   display: flex;
   justify-content: space-between;
-  background-color: transparent;
-  position: absolute;
 }
 
 .header-logo {
   display: flex;
   align-items: center;
-}
-
-.contet{
-  display: flex;
 }
 
 .t-icon {
@@ -25,34 +21,12 @@
   font-size: 25px;
 }
 
-.gest{
+.contet{
   display: flex;
   align-items: center;
-}
-
-.log{
-  display: flex;
-  align-items: center;
-}
-
-.notice{
-  display: flex;
-  align-items: center;
-}
-
-.gest_i{
-  font-size: 30px;
-  color: #99ccf2;
-  margin-right: 3vw;
-}
-
-.log_i{
-  font-size: 30px;
-  color: #99ccf2
-}
-
-.notice_i{
-  font-size: 30px;
-  color: #99ccf2;
-  margin-left: 3vw;
+  .icon{
+    font-size: 30px;
+    color: #99ccf2;
+    margin-right: 3vw;
+  }
 }
