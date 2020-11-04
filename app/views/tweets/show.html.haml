@@ -1,0 +1,50 @@
+= render 'divisions/header'
+
+.Wrapper
+  .Wrapper__content
+    .Wrapper__content__show
+      .Wrapper__content__show__left
+        %p.contributor 投稿者
+        = image_tag("sora1.jpg",class:"contributor-image")
+        .Wrapper__content__show__left__edit
+        = link_to(edit_tweet_path) do
+          .edit-btn
+            .edit-btn-content
+              = icon('fas', 'edit')
+              = '投稿を編集する'
+        .Wrapper__content__show__left__destroy
+        = link_to '#'  do
+          .edit-btn
+            .edit-btn-content
+              = icon('fas', 'trash')
+              = '投稿を削除する'
+      .Wrapper__content__show__right
+        .show-title
+          タイトル
+        .show-tag
+          %span.tag #タグ
+        .show-image
+          = image_tag("sora1.jpg",class:"show-image1")
+        .show-text
+          = icon("fas fa-pen", class: "text-icon")
+          内容
+          .box
+        .show-map
+          .map-text
+            = icon("fas fa-map-marked-alt", class: "map-icon")
+            地図
+          = image_tag("sora1.jpg",class:"show-map1")
+      .Wrapper__content__show__comment
+        = form_with(model: @item, local: true) do |f|
+          = f.text_area :hoge, placeholder: "コメントする", rows: "2" ,class: "textbox"
+          = f.submit "SEND", class: "form__submit"
+          .Wrapper__content__show__comment__list
+            %h4 ＜コメント一覧＞
+          -# - if @comments
+          -#   - @comments.each do |comment|
+          -#     %p
+          -#       %strong
+          -#         = link_to comment.user.nickname, "/users/#{comment.user_id}"
+          -#         ：
+          -#       = comment.text
+

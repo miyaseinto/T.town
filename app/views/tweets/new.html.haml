@@ -1,0 +1,33 @@
+= render 'divisions/header'
+
+.Wrapper
+  .Wrapper__inner
+    .Wrapper__inner__title 
+      %h2.title 町のお知らせを投稿
+    .Wrapper__inner__tweet
+      = form_with(model: @item, local: true) do |f|
+        .tweet-name
+          タイトル
+          %span.indispensable 必須
+        = f.text_field :hoge, class:"tweet-text"
+        .tweet-name
+          タグ
+          %span.any 任意
+          %span.comma ※スペースかカンマで区切ってください
+        = f.text_field :hoge, class:"tweet-text"
+        .tweet-name
+          投稿画像
+          %span.indispensable 必須
+        = f.file_field :hoge,class:"tweet-image"
+        .tweet-name
+          場所
+          %span.any 任意
+        = f.text_field :hoge, class:"tweet-text"
+        .tweet-name
+          内容
+          %span.indispensable 必須
+        = f.text_area :hoge ,class:"tweet-text1"
+        .tweet-submit
+          = f.submit "投稿" ,class:"sell-btn"
+
+

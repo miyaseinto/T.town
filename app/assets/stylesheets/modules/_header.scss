@@ -1,0 +1,32 @@
+.top-page-header {
+  background-color: #ffff80;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+  width: 100vw;
+  padding: 2vh 5vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.t-icon {
+  width: 2vw;
+}
+
+.logo {
+  color: #99ccf2;
+  font-size: 25px;
+}
+
+.contet{
+  display: flex;
+  align-items: center;
+  .icon{
+    font-size: 30px;
+    color: #99ccf2;
+    margin-right: 3vw;
+  }
+}
