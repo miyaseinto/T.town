@@ -1,6 +1,5 @@
 .Tweet{
   margin: 3vh 5vw;
-
   &__text{
     display: flex;
     align-items: center;
@@ -51,18 +50,18 @@
     &__right{
       width: 70vw;
       padding: 0 30px;
-
       &__text{
         font-size: 20px;
         color: #ff8c00;
         text-align: center;
       }
-      &__tweet{
-        margin-top: 20px;
-        height: 200px;
-        width: 100%;
+      .none{
         border: 2px solid rgb(121, 121, 121);  
-        border-radius: 70px 15px 70px 15px;
+        margin: 100px 80px;
+        padding: 30px;
+        font-size: 20px;
+        color: #ff8c00;
+        text-align: center;
       }
     }
   }

@@ -22,12 +22,7 @@
     .Tweet__content__right
       .Tweet__content__right__text
         %span お知らせ投稿一覧
-      .Tweet__content__right__tweet
-      .Tweet__content__right__tweet
-      .Tweet__content__right__tweet
-      -# - if @posts.empty?
-      -#   = render "layouts/empty"
-      -# - else
-      -#   .Post_index
-      -#     - @posts.each do |post|
-      -#       = render 'post'
+      - if @tweets.present?
+        = render "form"
+      - else
+        %h1.none 現在投稿はありません。

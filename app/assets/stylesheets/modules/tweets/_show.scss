@@ -75,10 +75,10 @@
       }
       .show-text{
         font-size: 20px;
+        margin-top: 10px;
         .box{
-          height: 300px;
+          text-align: left;
           padding: 30px;
-          border: 1px solid red;
           margin: 0 20px 20px 20px ;
         }
       }
@@ -89,7 +89,7 @@
           font-size: 20px;
         }
         .map-icon{
-          padding-right: 5px;
+         margin-right: 5px;
         }
         .show-map1{
           width: 80%;

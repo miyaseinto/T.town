@@ -1,0 +1,18 @@
+- @tweets.each do |tweet|
+  = link_to tweet_path(tweet),class:"tweet" do
+    .Tweet__content__right__tweet
+      .Form__left
+        .image
+          = image_tag tweet.image.variant(resize: '150x150') if tweet.image.present?
+      .Form__right
+        .Form__right__name
+          = tweet.name
+        -# .Form__right__tag
+        -# - if tweet.hoge.present?
+          -# - tweet.hoge.each do |tag|
+          -#   .tag_text
+          -#     = tag
+        .Form__right__text
+          %h2.text-name 内容：
+          .content
+            = tweet.text 

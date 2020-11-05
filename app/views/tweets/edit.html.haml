@@ -5,11 +5,11 @@
     .Wrapper__inner__title 
       %h2.title 投稿を編集
     .Wrapper__inner__tweet
-      = form_with(model: @item, local: true) do |f|
+      = form_with(model: @tweet, local: true) do |f|
         .tweet-name
           タイトル
           %span.indispensable 必須
-        = f.text_field :hoge, class:"tweet-text"
+        = f.text_field :name, class:"tweet-text"
         .tweet-name
           タグ
           %span.any 任意
@@ -18,7 +18,7 @@
         .tweet-name
           投稿画像
           %span.indispensable 必須
-        = f.file_field :hoge,class:"tweet-image"
+        = f.file_field :image,class:"tweet-image"
         .tweet-name
           場所
           %span.any 任意
@@ -26,7 +26,7 @@
         .tweet-name
           内容
           %span.indispensable 必須
-        = f.text_area :hoge ,class:"tweet-text1"
+        = f.text_area :text ,class:"tweet-text1"
         .tweet-submit
           = f.submit "投稿" ,class:"sell-btn"
 
