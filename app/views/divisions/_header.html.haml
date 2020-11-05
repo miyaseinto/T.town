@@ -10,7 +10,7 @@
       = link_to(new_tweet_path,class: "icon") do
         = icon("far fa-paper-plane", class: "log-icon")
     %span.notice
-      = link_to "#", class: "icon" do
+      = link_to(tweets_path,class: "icon") do
         = icon("far fa-bell", class: "notice-icon")
     %span.message
       = link_to(new_division_path,class: "icon") do

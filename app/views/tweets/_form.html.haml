@@ -1,0 +1,11 @@
+- @tweets.each do |tweet|
+  = link_to tweet_path(tweet),class:"tweet" do
+    .Tweet__content__right__tweet
+      .Form__left
+        .image
+          = tweet.image
+      .Form__right
+        .Form__right__top
+          = tweet.name
+        .Form__right__down
+          = tweet.text

@@ -1,0 +1,35 @@
+.tweet{
+  text-decoration: none;
+}
+.Tweet__content__right__tweet{
+  margin-top: 20px;
+  height: 200px;
+  width: 100%;
+  border: 2px solid rgb(121, 121, 121);  
+  box-shadow: 0px 0px 3px rgba(0,0,0,0.2);
+  border-radius: 70px 15px 70px 15px;
+  display: flex;
+  justify-content: space-between;
+  color:rgb(121, 121, 121) ;
+  .Form__left{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .image{
+      width: 30vw;
+      height: 30vh;
+      padding: 30px;
+      
+    }
+  }
+  .Form__right{
+    width: 50%;
+    &__top{
+      height: 50%;
+    }
+    &__down{
+      height: 50%;
+    }
+  }
+}
