@@ -7,28 +7,30 @@
         %p.contributor 投稿者
         = image_tag("sora1.jpg",class:"contributor-image")
         .Wrapper__content__show__left__edit
-        = link_to(edit_tweet_path) do
+        = link_to(edit_tweet_path,method: :get) do
           .edit-btn
             .edit-btn-content
               = icon('fas', 'edit')
               = '投稿を編集する'
         .Wrapper__content__show__left__destroy
-        = link_to '#'  do
+        = link_to(tweet_path(@tweet.id),method: :delete) do
           .edit-btn
             .edit-btn-content
               = icon('fas', 'trash')
               = '投稿を削除する'
       .Wrapper__content__show__right
         .show-title
-          タイトル
+          = @tweet.name
         .show-tag
           %span.tag #タグ
         .show-image
-          = image_tag("sora1.jpg",class:"show-image1")
+          = image_tag @tweet.image,class:"show-image1" if @tweet.image.present?
+          -# = image_tag("sora1.jpg",class:"show-image1")
         .show-text
           = icon("fas fa-pen", class: "text-icon")
           内容
           .box
+            = @tweet.text
         .show-map
           .map-text
             = icon("fas fa-map-marked-alt", class: "map-icon")
