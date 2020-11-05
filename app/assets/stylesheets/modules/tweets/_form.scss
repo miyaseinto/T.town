@@ -3,33 +3,46 @@
 }
 .Tweet__content__right__tweet{
   margin-top: 20px;
-  height: 200px;
-  width: 100%;
+  margin: 20px auto;
+  width: 80%;
   border: 2px solid rgb(121, 121, 121);  
   box-shadow: 0px 0px 3px rgba(0,0,0,0.2);
-  border-radius: 70px 15px 70px 15px;
   display: flex;
   justify-content: space-between;
   color:rgb(121, 121, 121) ;
+  border-radius: 30px;
   .Form__left{
-    width: 50%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 30%;
     .image{
-      width: 30vw;
-      height: 30vh;
-      padding: 30px;
-      
+      padding: 20px;
     }
   }
   .Form__right{
-    width: 50%;
-    &__top{
-      height: 50%;
+    width: 70%;
+      &__name{
+      margin: 20px 0;
+      color: black;
+      font-weight: bolder;
+      text-align: center;
+      font-size: 20px;
+      border-bottom: 1px solid rgb(121, 121, 121);
+      }
+      &__tag{
+        padding: 10px 0;
+        
+      }
+      &__text{
+        display: flex;
+        justify-content: space-between;
+        .text-name{
+          color: black;
+          width: 10%;
+        }
+        .content{
+          width: 90%;
+          margin-bottom: 10px;
+        }
+      }
     }
-    &__down{
-      height: 50%;
-    }
-  }
 }
