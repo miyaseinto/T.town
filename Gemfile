@@ -69,3 +69,7 @@ group :production do
 end
 
 gem 'mini_magick'
+
+gem 'carrierwave'
+
+gem 'fog-aws'

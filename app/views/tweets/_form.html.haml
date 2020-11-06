@@ -2,8 +2,7 @@
   = link_to tweet_path(tweet),class:"tweet" do
     .Tweet__content__right__tweet
       .Form__left
-        .image
-          = image_tag tweet.image.variant(resize: '150x150') if tweet.image.present?
+        = image_tag tweet.image.url,class:"tweetimage" if tweet.image.present?
       .Form__right
         .Form__right__name
           = tweet.name
