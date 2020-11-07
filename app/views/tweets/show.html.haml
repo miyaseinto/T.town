@@ -7,17 +7,19 @@
         %p.contributor 投稿者
         = image_tag("sora1.jpg",class:"contributor-image")
         .Wrapper__content__show__left__edit
-        = link_to(edit_tweet_path,method: :get) do
-          .edit-btn
-            .edit-btn-content
-              = icon('fas', 'edit')
-              = '投稿を編集する'
-        .Wrapper__content__show__left__destroy
-        = link_to(tweet_path(@tweet.id),method: :delete) do
-          .edit-btn
-            .edit-btn-content
-              = icon('fas', 'trash')
-              = '投稿を削除する'
+        - if user_signed_in?
+          - if @tweet.user_id == current_user.id
+            = link_to(edit_tweet_path,method: :get) do
+              .edit-btn
+                .edit-btn-content
+                  = icon('fas', 'edit')
+                  = '投稿を編集する'
+            .Wrapper__content__show__left__destroy
+            = link_to(tweet_path(@tweet.id),method: :delete) do
+              .edit-btn
+                .edit-btn-content
+                  = icon('fas', 'trash')
+                  = '投稿を削除する'
       .Wrapper__content__show__right
         .show-title
           = @tweet.name

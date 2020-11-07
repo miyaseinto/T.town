@@ -1,0 +1,29 @@
+= render 'divisions/header'
+
+.Wrapper
+  .Wrapper__inner
+    .Wrapper__inner__title 
+      %h2.title 新規登録
+    .Wrapper__inner__tweet
+      = form_with model: @user, url: user_registration_path, id: 'new_user', class: 'registration-main', local: true do |f|
+        = render "devise/shared/error_messages", resource: resource
+        .tweet-name
+          ユーザー名（10文字以内）
+          %span.indispensable 必須
+        = f.text_field :name, autofocus: true, autocomplete: "name",class:"tweet-text"
+        .tweet-name
+          メールアドレス
+          %span.indispensable 必須
+        = f.email_field :email, autofocus: true, autocomplete: "email", class:"tweet-text"
+        .tweet-name
+          パスワード（英数字6文字以上）
+          %span.indispensable 必須
+        = f.password_field :password, autocomplete: "new-password", class:"tweet-text"
+        .tweet-name
+          パスワード再入力
+          %span.indispensable 必須
+        = f.password_field :password_confirmation, autocomplete: "new-password", class:"tweet-text"
+        .tweet-submit
+          = f.submit "登録" ,class:"sell-btn"
+
+
