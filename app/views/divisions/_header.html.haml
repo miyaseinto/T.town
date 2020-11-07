@@ -1,18 +1,36 @@
-%header.top-page-header
-  %span.header-logo
-    = link_to image_tag("t.png", class:"t-icon"), "/"
-    %span.logo .town
-  .contet
-    %span.gest
-      = link_to "#", class: "icon" do
-        = icon("fas fa-user-edit", class: "gest-icon")
-    %span.log
-      = link_to(new_tweet_path,class: "icon") do
-        = icon("far fa-paper-plane", class: "log-icon")
-    %span.notice
-      = link_to(tweets_path,class: "icon") do
-        = icon("far fa-bell", class: "notice-icon")
-    %span.message
-      = link_to(new_division_path,class: "icon") do
-        = icon("fas fa-envelope", class: "message-icon")
-        
+- if user_signed_in?
+  %header.top-page-header
+    %span.header-logo
+      = link_to image_tag("t.png", class:"t-icon"), "/"
+      %span.logo .town
+    .contet
+      %span.gest
+        = link_to(destroy_user_session_path, method: :delete, class: "icon") do
+          = icon("fas fa-user-edit", class: "gest-icon")
+      %span.log
+        = link_to(new_tweet_path,class: "icon") do
+          = icon("far fa-paper-plane", class: "log-icon")
+      %span.notice
+        = link_to(tweets_path,class: "icon") do
+          = icon("far fa-bell", class: "notice-icon")
+      %span.message
+        = link_to(new_division_path,class: "icon") do
+          = icon("fas fa-envelope", class: "message-icon")
+- else
+  %header.top-page-header
+    %span.header-logo
+      = link_to image_tag("t.png", class:"t-icon"), "/"
+      %span.logo .town
+    .contet
+      %span.gest
+        = link_to(new_user_session_path,class: "icon") do
+          = icon("fas fa-user-cog", class: "gest-icon")
+      %span.log
+        = link_to(new_tweet_path,class: "icon") do
+          = icon("far fa-paper-plane", class: "log-icon")
+      %span.notice
+        = link_to(tweets_path,class: "icon") do
+          = icon("far fa-bell", class: "notice-icon")
+      %span.message
+        = link_to(new_division_path,class: "icon") do
+          = icon("fas fa-envelope", class: "message-icon")

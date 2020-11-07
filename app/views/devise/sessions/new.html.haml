@@ -1,0 +1,27 @@
+= render 'divisions/header'
+
+.Wrapper
+  .Wrapper__inner
+    .Wrapper__inner__title 
+      %h2.title ログイン
+    .Wrapper__inner__tweet
+      = form_with model: @user, url: user_session_path, id: 'new_user', class: 'registration-main', local: true do |f|
+        = render "devise/shared/error_messages", resource: resource
+        .tweet-name
+          メールアドレス
+          %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email",class:"tweet-text"
+        .tweet-name
+          パスワード
+          - if @minimum_password_length
+            %em
+              (#{@minimum_password_length} characters minimum)
+          %br/
+        = f.password_field :password, autocomplete: "new-password",class:"tweet-text"
+        .tweet-submit
+          = f.submit "ログイン" ,class:"sell-btn"
+        = render "devise/shared/links"
+
+
+
+
