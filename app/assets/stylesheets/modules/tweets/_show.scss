@@ -49,6 +49,7 @@
       border-radius: 5%;
       padding: 30px 20px ;
       text-align: center;
+      max-height: 1000px;
       .show-title{
         font-size: 25px;
         margin-bottom: 10px;
@@ -125,6 +126,12 @@
       &__list{
         padding: 5px;
         margin-top: 15px;
+        .commentdate{
+          padding-top: 10px;
+        }
+        .commentname{
+          color: #99ccf2;
+        }
       }
     }
   }
