@@ -8,5 +8,13 @@ class Tweet < ApplicationRecord
   validates :text, presence: true
   validates :image, presence: true
 
+  def self.search(search)
+    if search != ""
+      Tweet.where('name LIKE(?)', "%#{search}%")
+    else
+      Tweet.all
+    end
+  end
+
   mount_uploader :image, ImageUploader
 end
