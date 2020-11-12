@@ -1,33 +1,79 @@
 - if user_signed_in?
   %header.top-page-header
-    %span.header-logo
+    .header-logo
       = link_to image_tag("t.png", class:"t-icon"), "/"
       %span.logo .town
-    .contet
-      %span.gest
-        = link_to(destroy_user_session_path, method: :delete, class: "icon") do
-          = icon("fas fa-user-edit", class: "gest-icon")
-      %span.log
-        = link_to(new_tweet_path,class: "icon") do
-          = icon("far fa-paper-plane", class: "log-icon")
-      %span.notice
-        = link_to(tweets_path,class: "icon") do
-          = icon("far fa-bell", class: "notice-icon")
-      %span.message
-        = link_to(new_division_path,class: "icon") do
-          = icon("fas fa-envelope", class: "message-icon")
+    .content
+      .gest
+        .icon
+          = icon("fas fa-user-cog", class: "icon")
+        %ul.content__gest
+          %li
+            = link_to "#", method: :get do
+              = icon("fas fa-angle-double-right", class: "icon")
+              ="マイページ"
+            = link_to destroy_user_session_path, method: :delete do
+              = icon("fas fa-angle-double-right", class: "icon")
+              ="ログアウト"
+      .gest
+        .icon
+          = icon("far fa-paper-plane", class: "icon")
+        %ul.content__gest
+          %li
+            = link_to tweets_path, method: :get do
+              = icon("fas fa-angle-double-right", class: "icon")
+              ="投稿一覧"
+            = link_to new_tweet_path, method: :get do
+              = icon("fas fa-angle-double-right", class: "icon")
+              ="新規投稿"
+      .gest
+        .icon
+          = icon("far fa-bell", class:  "icon")
+        %ul.content__gest
+          %li
+            = link_to "#", method: :get do
+              = icon("fas fa-angle-double-right", class: "icon")
+              ="通知一覧"
+      .gest
+        .icon
+          = icon("fas fa-envelope", class:  "icon")
+        %ul.content__gest
+          %li
+            = link_to new_division_path, method: :get do
+              = icon("fas fa-angle-double-right", class: "icon")
+              ="メッセージ投稿"
 - else
   %header.top-page-header
-    %span.header-logo
+    .header-logo
       = link_to image_tag("t.png", class:"t-icon"), "/"
       %span.logo .town
-    .contet
-      %span.gest
-        = link_to(new_user_session_path,class: "icon") do
-          = icon("fas fa-user-cog", class: "gest-icon")
-      %span.notice
-        = link_to(tweets_path,class: "icon") do
-          = icon("far fa-bell", class: "notice-icon")
-      %span.message
-        = link_to(new_division_path,class: "icon") do
-          = icon("fas fa-envelope", class: "message-icon")
+    .content
+      .gest
+        .icon
+          = icon("fas fa-user-cog", class: "icon")
+        %ul.content__gest
+          %li
+            = link_to new_user_registration_path, method: :get do
+              = icon("fas fa-angle-double-right", class: "icon")
+              ="新規登録"
+            = link_to new_user_session_path, method: :get do
+              = icon("fas fa-angle-double-right", class: "icon")
+              ="ログイン"
+      .gest
+        .icon
+          = icon("far fa-paper-plane", class: "icon")
+        %ul.content__gest
+          %li
+            = link_to tweets_path, method: :get do
+              = icon("fas fa-angle-double-right", class: "icon")
+              ="投稿一覧"
+      .gest
+        .icon
+          = icon("fas fa-envelope", class:  "icon")
+        %ul.content__gest
+          %li
+            = link_to new_division_path, method: :get do
+              = icon("fas fa-angle-double-right", class: "icon")
+              ="メッセージ投稿"
+
+
