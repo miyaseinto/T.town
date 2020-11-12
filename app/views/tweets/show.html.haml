@@ -40,7 +40,7 @@
           = image_tag("sora1.jpg",class:"show-map1")
       .Wrapper__content__show__comment
         - if current_user
-          = form_with(model: [@tweet,@comment], local: true) do |f|
+          = form_with(model: [@tweet,@comment], local: true,id: "new_comment") do |f|
             = f.text_area :text, placeholder: "コメントする(40文字以内)", rows: "2" ,class: "textbox",maxlength:"40"
             = f.submit "SEND", class: "form__submit"
         - else
