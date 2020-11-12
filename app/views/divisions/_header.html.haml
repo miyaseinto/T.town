@@ -28,20 +28,12 @@
               ="新規投稿"
       .gest
         .icon
+        = link_to "#",class:"icon", method: :get do
           = icon("far fa-bell", class:  "icon")
-        %ul.content__gest
-          %li
-            = link_to "#", method: :get do
-              = icon("fas fa-angle-double-right", class: "icon")
-              ="通知一覧"
       .gest
         .icon
+        = link_to new_division_path,class:"icon", method: :get do
           = icon("fas fa-envelope", class:  "icon")
-        %ul.content__gest
-          %li
-            = link_to new_division_path, method: :get do
-              = icon("fas fa-angle-double-right", class: "icon")
-              ="メッセージ投稿"
 - else
   %header.top-page-header
     .header-logo
@@ -61,19 +53,11 @@
               ="ログイン"
       .gest
         .icon
+        = link_to tweets_path,class:"icon", method: :get do
           = icon("far fa-paper-plane", class: "icon")
-        %ul.content__gest
-          %li
-            = link_to tweets_path, method: :get do
-              = icon("fas fa-angle-double-right", class: "icon")
-              ="投稿一覧"
       .gest
         .icon
+        = link_to new_division_path,class:"icon", method: :get do
           = icon("fas fa-envelope", class:  "icon")
-        %ul.content__gest
-          %li
-            = link_to new_division_path, method: :get do
-              = icon("fas fa-angle-double-right", class: "icon")
-              ="メッセージ投稿"
 
 
