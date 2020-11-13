@@ -23,6 +23,10 @@
       .Wrapper__content__show__right
         .show-title
           = @tweet.name
+        .show-like 
+          = link_to '#',class:"tweet-like" do
+            = icon("far fa-heart", class: "like")
+          -# = render 'likes/new'
         .show-tag
           %span.tag #タグ
         .show-image
