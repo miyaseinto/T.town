@@ -1,6 +1,5 @@
 $(function(){
   function buildHTML(comment){
-    console.log(comment)
     let html =  `<p class="commentdate">
                   <strong class="commentname">
                     ${comment.user_name} : 
@@ -22,6 +21,7 @@ $(function(){
       contentType: false
     })
     .done(function(data){
+      console.log(data)
       let html = buildHTML(data);
       $('.Wrapper__content__show__comment__list').append(html);
       $('.textbox').val('');
