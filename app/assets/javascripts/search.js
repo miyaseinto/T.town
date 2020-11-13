@@ -2,10 +2,10 @@ $(function() {
   let search_list = $(".Tweetdate");
   function appendTweet(tweet) {
     console.log(tweet)
-    let html = `<a href="/tweets/${tweet.id}"data-method="get">
+    let html = `<a class="tweet" href="/tweets/${tweet.id}"data-method="get">
                   <div class="Tweet__content__right__tweet">
                     <div class="Form__left">
-                      <%= img '${tweet.image}',class="tweetimage" %>
+                      <img class="tweetimage" src="${tweet.image}">
                     </div>
                     <div class="Form__right">
                       <div class="Form__right__name">
@@ -16,6 +16,7 @@ $(function() {
                         <div class="content">
                           ${tweet.text}
                         </div>
+                      </div>
                     </div>
                   </div>
                 </a>`
