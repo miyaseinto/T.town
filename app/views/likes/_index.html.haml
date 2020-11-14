@@ -1,0 +1,7 @@
+- if !tweet.like_user(current_user.id)
+  = link_to(likes_path(tweet_id: tweet.id), method: :post) do
+    = icon("far fa-heart", class: "like-btn")
+- else
+  = link_to(likes_path(tweet_id: tweet.id), method: :delete) do
+    = icon("far fa-heart", class: "unlike-btn")
+    

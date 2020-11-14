@@ -24,9 +24,7 @@
         .show-title
           = @tweet.name
         .show-like 
-          = link_to '#',class:"tweet-like" do
-            = icon("far fa-heart", class: "like")
-          -# = render 'likes/new'
+          = render partial: 'likes/index', locals: { tweet: @tweet }
         .show-tag
           %span.tag #タグ
         .show-image
