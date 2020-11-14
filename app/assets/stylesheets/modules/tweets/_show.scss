@@ -57,27 +57,8 @@
       }
       .show-like{
         position: absolute;
-
         right: 30px;
         font-size: 30px;
-        .tweet-like{
-          
-          color: black;
-          .like-btn {
-            width: 25px;
-            height: 30px;
-            font-size: 25px;
-            color: #808080; 
-            margin-left: 20px;
-            }
-          .unlike-btn{
-            width: 25px;
-            height: 30px;
-            font-size: 25px;
-            color: #e54747;
-            margin-left: 20px;
-          }
-        }
       }
       .show-tag{
         .tag{

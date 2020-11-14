@@ -2,6 +2,11 @@ class Tweet < ApplicationRecord
 
   belongs_to :user
   has_many :comments
+  has_many :likes, dependent: :destroy
+
+  def like_user(id)
+    likes.find_by(user_id: id)
+  end
 
   has_one_attached :image
   validates :name, presence: true
