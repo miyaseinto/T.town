@@ -9,6 +9,9 @@
         %i.far.fa-heart{"aria-hidden" => "true", style: "color: #808080;"}
           = tweet.likes.count
   - else
+    %span.likecount
+      = "いいね数："
+      = tweet.likes.count
 - else
 
 
