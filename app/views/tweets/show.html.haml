@@ -23,6 +23,9 @@
       .Wrapper__content__show__right
         .show-title
           = @tweet.name
+        .show-like 
+          %div{id: "like_#{@tweet.id}"}
+            = render partial: 'likes/like_links', locals:{ tweet: @tweet }
         .show-tag
           %span.tag #タグ
         .show-image

@@ -50,9 +50,15 @@
       padding: 30px 20px ;
       text-align: center;
       max-height: 1000px;
+      position: relative;
       .show-title{
         font-size: 25px;
         margin-bottom: 10px;
+      }
+      .show-like{
+        position: absolute;
+        right: 30px;
+        font-size: 30px;
       }
       .show-tag{
         .tag{
