@@ -3,6 +3,9 @@ class Tweet < ApplicationRecord
   belongs_to :user
   has_many :comments
   has_many :likes, dependent: :destroy
+  
+  geocoded_by :address
+  after_validation :geocode, if: :address_changed?
 
   def like_user(id)
     likes.find_by(user_id: id)
