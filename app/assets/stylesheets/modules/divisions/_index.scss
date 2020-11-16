@@ -37,20 +37,14 @@
   padding: 5vh 5vw;
   display: flex;
   justify-content: center;
-  &__google{
-    height: 45vh;
-    width: 48vw;
-    background-image: image-url('see3.jpg');
-    background-size: cover;
-  }
   &__text{
     margin-top: 80px;
     padding: 60px;
     width: 35vw;
     height: 55vh;
     background-color: white;
-    text-align: center;
     &__name{
+      text-align: center;
       padding-bottom: 10px;
       margin-bottom: 25px;
       font-size: 25px;
@@ -58,6 +52,7 @@
     }
     &__box{
       font-size: 15px;
+      text-align: center;
     }
   }
 }
@@ -73,4 +68,9 @@
   }
 }
 
+iframe{
+  height: 45vh;
+  width: 48vw;
+  box-shadow: 1px 10px 10px rgba(0,0,0,0.2);
+}
 

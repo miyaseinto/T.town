@@ -62,10 +62,13 @@ ActiveRecord::Schema.define(version: 2020_11_13_081722) do
     t.string "name"
     t.string "image"
     t.text "text"
+    t.string "address"
+    t.float "latitude"
+    t.float "longitude"
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["text"], name: "index_tweets_on_text", length: 32
+    t.index ["name"], name: "index_tweets_on_name", length: 32
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
