@@ -40,7 +40,8 @@
           .map-text
             = icon("fas fa-map-marked-alt", class: "map-icon")
             = "地図"
-          = image_tag("sora1.jpg",class:"show-map1")
+          .map#google
+            = image_tag("sora1.jpg",class:"show-map1")
       .Wrapper__content__show__comment
         - if current_user
           = form_with(model: [@tweet,@comment], local: true,id: "new_comment") do |f|
