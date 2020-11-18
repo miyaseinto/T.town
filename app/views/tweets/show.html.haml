@@ -33,13 +33,14 @@
           -# = image_tag("sora1.jpg",class:"show-image1")
         .show-text
           = icon("fas fa-pen", class: "text-icon")
-          内容
+          %span.show-text 内容
           .box
             = @tweet.text
         .show-map
+        - if @tweet.address.present?
           .map-text
             = icon("fas fa-map-marked-alt", class: "map-icon")
-            = "地図"
+            %span.show-text 地図
           #map
             :javascript
               function initMap() {
