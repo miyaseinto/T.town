@@ -28,7 +28,7 @@ class TweetsController < ApplicationController
 
   def update
     if @tweet.update(tweet_params)
-      redirect_to root_path
+      redirect_to tweets_path
     else
       render 'edit'
     end
@@ -36,7 +36,7 @@ class TweetsController < ApplicationController
 
   def destroy
     if @tweet.destroy
-      redirect_to root_path
+      redirect_to tweets_path
     else
       render 'destroy'
     end
@@ -52,7 +52,7 @@ class TweetsController < ApplicationController
 
   private
   def tweet_params
-    params.require(:tweet).permit(:name, :image, :text).merge(user_id: current_user.id)
+    params.require(:tweet).permit(:name, :image, :text, :address, :latitude, :longitude).merge(user_id: current_user.id)
   end
 
   def set_tweet
