@@ -78,10 +78,10 @@
         .show-image1{
           width: 80%;
           height: 300px;
-          border-radius: 10%;
+          border-radius: 8%;
           background-position: center ;
           text-align: center;
-          margin: 10px;
+          margin: 20px 0 10px 0;
         }
       }
       .show-text{
@@ -145,4 +145,13 @@
       }
     }
   }
+}
+#map {
+  margin-top:10px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:left;
+  width: 80%;
+  height: 300px;
+  background-position: center ;
 }

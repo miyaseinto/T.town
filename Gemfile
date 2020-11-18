@@ -79,3 +79,7 @@ gem 'devise'
 gem 'jquery-rails'
 
 gem "geocoder"
+
+gem "gmaps4rails"
+
+gem "dotenv-rails"
