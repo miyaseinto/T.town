@@ -20,6 +20,9 @@
         = f.password_field :password, autocomplete: "new-password",class:"tweet-text"
         .tweet-submit
           = f.submit "ログイン" ,class:"sell-btn"
+        .tweet-gest
+          = link_to( users_guest_sign_in_path, class: "gest-btn", method: :post) do
+            %span.btn ゲストログイン(閲覧用)
 
 
 
