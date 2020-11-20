@@ -7,11 +7,10 @@
         .Form__right
           .Form__right__name
             = tweet.name
-          -# .Form__right__tag
-          -# - if tweet.hoge.present?
-            -# - tweet.hoge.each do |tag|
-            -#   .tag_text
-            -#     = tag
+          .Form__right__tag
+          %span.taglist タグ：
+          - tweet.tag_list.each do |tag|
+            = tag
           .Form__right__text
             %h2.text-name 内容：
             .content

@@ -8,6 +8,8 @@ class Tweet < ApplicationRecord
     likes.find_by(user_id: id)
   end
 
+  acts_as_taggable
+
   has_one_attached :image
   validates :name, presence: true
   validates :text, presence: true

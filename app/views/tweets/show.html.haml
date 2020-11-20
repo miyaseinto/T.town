@@ -28,7 +28,10 @@
           %div{id: "like_#{@tweet.id}"}
             = render partial: 'likes/like_links', locals:{ tweet: @tweet }
         .show-tag
-          %span.tag #タグ
+          - @tweet.tag_list.each do |tag|
+            = link_to tweets_path(tag_name: tag),class:"tag" do
+              %span.taglist
+                = tag
         .show-image
           = image_tag @tweet.image.url,class:"show-image1" if @tweet.image.present?
           -# = image_tag("sora1.jpg",class:"show-image1")
