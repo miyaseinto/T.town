@@ -1,0 +1,19 @@
+= render 'divisions/header'
+
+.Wrapper
+  .Wrapper__inner
+    .Wrapper__inner__title 
+      %h2.title ユーザー編集
+    .Wrapper__inner__tweet
+      = form_with(model: @user, local: true) do |f|
+        .tweet-name
+          ユーザー名（10文字以内）
+          %span.indispensable 必須
+        = f.text_field :name, autofocus: true, autocomplete: "name",class:"tweet-text"
+        .tweet-name
+          メールアドレス
+          %span.indispensable 必須
+        = f.email_field :email, autofocus: true, autocomplete: "email", class:"tweet-text"
+        .tweet-submit
+          = f.submit "変更" ,class:"sell-btn"
+

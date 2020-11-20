@@ -9,7 +9,7 @@
           = icon("fas fa-user-cog", class: "icon")
         %ul.content__gest
           %li
-            = link_to "#", method: :get do
+            = link_to "/users/#{current_user.id}" do
               = icon("fas fa-angle-double-right", class: "icon")
               ="マイページ"
             = link_to destroy_user_session_path, method: :delete do

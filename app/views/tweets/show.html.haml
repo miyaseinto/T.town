@@ -5,7 +5,8 @@
     .Wrapper__content__show
       .Wrapper__content__show__left
         %p.contributor 投稿者
-        = image_tag("sora1.jpg",class:"contributor-image")
+        = current_user.name
+        = "さんの投稿です"
         .Wrapper__content__show__left__edit
         - if user_signed_in?
           - if @tweet.user_id == current_user.id
