@@ -24,6 +24,8 @@ class TweetsController < ApplicationController
   end
 
   def show
+    user = @tweet.user_id
+    @user = User.find(user)
     @comment = Comment.new
     @comments = @tweet.comments.includes(:user)
   end
