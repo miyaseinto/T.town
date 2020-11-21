@@ -14,7 +14,7 @@
           タグ
           %span.any 任意
           %span.comma ※スペースかカンマで区切ってください
-        -# = f.text_field :hoge, class:"tweet-text"
+        = f.text_field :tag_list, value: @tweet.tag_list.join(','), class: "tweet-text"
         .tweet-name
           投稿画像
           %span.indispensable 必須

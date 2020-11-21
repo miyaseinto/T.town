@@ -9,16 +9,16 @@
       .Tweet__content__left__text
         %span 条件で絞り込み
       .Tweet__content__left__search
-        = form_with(url: search_tweets_path, local: true, method: :get) do |f|
+        = form_with(url: tweets_path, local: true, method: :get) do |f|
           .Form__input
             = f.text_field :keyword,placeholder: "キーワードを入力",class:"tweet-search"
             = button_tag type: 'submit', class: "tweet-search-btn" do
               = icon('fas', 'search')
       .Tweet__content__left__tag
-        -# - @tags.each do |tag|
-        -#   = link_to posts_c_index_path(tag_name: tag) do
-        -#     .tag
-        -#       = tag
+        - @tags.each do |tag|
+          = link_to tweets_path(tag_name: tag),class:"tag" do
+            %span.tag
+              = tag
     .Tweet__content__right
       .Tweet__content__right__text
         %span お知らせ投稿一覧

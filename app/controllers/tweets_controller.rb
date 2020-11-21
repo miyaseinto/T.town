@@ -3,6 +3,11 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = Tweet.all
+    @tags = Tweet.all_tags.order("taggings_count DESC").pluck(:name)
+
+    if params[:tag_name]
+      @tweets = Tweet.tagged_with("#{params[:tag_name]}")
+    end
   end
 
   def new
@@ -52,7 +57,7 @@ class TweetsController < ApplicationController
 
   private
   def tweet_params
-    params.require(:tweet).permit(:name, :image, :text, :address, :latitude, :longitude).merge(user_id: current_user.id)
+    params.require(:tweet).permit(:name, :tag_list, :image, :text, :address, :latitude, :longitude).merge(user_id: current_user.id)
   end
 
   def set_tweet
