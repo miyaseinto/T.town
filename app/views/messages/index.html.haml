@@ -1,0 +1,18 @@
+= render 'home/header'
+
+.Message
+  .Message__text
+    = icon("fas fa-envelope", class:  "icon")
+    %h1 行政相談チャット
+  .Message__box
+    .Message__box__text
+    .Message__box__bottom
+      = form_with(model: @hoge, local: true,class: "Form") do |f|
+        .Form
+          .Form__input
+            = f.text_field :content, class: 'Form__inputContent', placeholder: 'メッセージ入力'
+            = f.label :image, class: 'Form__inputImage' do
+              = icon('far', 'image', class: 'Form__icon')
+              = f.file_field :image, class: 'Hidden'
+          = button_tag type: 'submit', class: 'Form__submit' do
+            = icon('fas', 'paper-plane')

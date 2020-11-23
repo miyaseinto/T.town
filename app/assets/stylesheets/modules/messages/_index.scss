@@ -1,0 +1,86 @@
+.Message{
+  padding: 3vh 5vw;
+  background-image: image-url('siro.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  &__text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(121, 121, 121);
+    font-size: 40px;
+  }
+  &__box{
+    margin: 30px auto;
+    width: 40vw;
+    height: 80vh;
+    background-color: #fafafa;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 60px 0px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    &__text{
+      position: absolute;
+      top:0;
+      left: 0;
+      height: 80px;
+      width: 100%;
+      background: linear-gradient(103deg, rgb(110, 193, 228) 0%, rgb(110, 193, 228) 50%, rgb(110, 165, 228)) 100% center;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px 0px;
+    }
+    &__bottom{
+      position: absolute;
+      bottom:0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      border-top: 1px solid rgb(228, 228, 229);
+      background-color:white;
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 6px 0px;
+      display: flex;
+      align-items: center;
+      .Form{
+        width: 100%;
+        padding: 0 25px;
+        display: flex;
+        align-items: center;
+        &__input{
+          width: 100%;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          position: relative;
+            .Form__inputContent{
+              padding: 0 40px 0 10px;
+              height: 50px;
+              width: 100%;
+              position: absolute;
+              border: none;
+              outline: none;
+            }
+            .fa-image {
+              line-height: 1px;
+              font-size: 25px;
+              right: 10px;
+              position: absolute;
+              cursor: pointer;
+              color: #38aef0;
+            }
+        }
+        .Hidden{
+          display: none;
+        }
+        &__submit{
+          background-color: white;
+          color: #38aef0;
+          font-size: 30px;
+          margin-left: 15px;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
