@@ -42,27 +42,46 @@
       top: 80px;
       overflow: scroll;
       height: calc(100vh - 350px);
+      padding: 0 10px;
       &__text{
         margin-bottom: 46px;
-        .Comment-name{
+        padding:10px 0px 0px 15px;
+        &__content{
           display: flex;
-          padding-bottom: 12px;
-          .Name{
-            color: #333333;
-            font-size: 16px;
+          position: relative;
+          .Comment-image{
+            color: #38aef0;
+            font-size: 50px;
           }
-          .Time{
-            color: #999999;
-            font-size: 12px;
-            padding-left: 5px;
+          .Comment-name{
+            display: flex;
+            padding-bottom: 12px;
+            .Name{
+              color: #333333;
+              font-size: 18px;
+              padding-left: 15px;
+              color: #38aef0;
+            }
+            .Time{
+              color: #999999;
+              font-size: 12px;
+              padding-left: 5px;
+            }
           }
-        }
-        .Comment-text{
-          color: #434A54;
-          font-size: 14px;
-        }
-        .Message__image{
-          height: 300px;
+          .Comment-text{
+            position: absolute;
+            top:25px;
+            left: 70px;
+            flex-direction: column;
+            color: #434A54;
+            font-size: 14px;
+          }
+          .Message__image{
+            height: 300px;
+          }
+          .Textmessage{
+            font-size: 15px;
+          }
         }
       }
     }

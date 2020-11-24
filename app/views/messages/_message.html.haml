@@ -1,0 +1,53 @@
+.Message__box__center__text
+  .Message__box__center__text__content
+    .Comment-image
+      = icon("far fa-envelope",class: "qicon")
+    .Comment-name
+      .Name 
+        = "町民"
+      .Time 
+        = "%Y年%m月%d日 %H時%M分"
+    .Comment-text
+      .Textmessage
+        %p.Textmessage__content
+          = "コメントよろしくおねがいします。あの方は誰ですか？わっと同郵政アハハ毎日毎日よろしくおねがいしますあなたは今何を感じて何を考えていますか？間違いを間違いと見抜ける人じゃないと"
+        -# - if message.content.present?
+        -#   %p.Message__content
+        -#     = message.content
+        -# = image_tag message.image.url, class: 'Message__image' if message.image.present?
+
+
+.Message__box__center__text
+  .Message__box__center__text__content
+    .Comment-image
+      = icon("far fa-envelope-open",class: "qicon")
+    .Comment-name
+      .Name 
+        = "総務課"
+      .Time 
+        = "%Y年%m月%d日 %H時%M分"
+    .Comment-text
+      .Textmessage
+        %p.Textmessage__content
+          = "コメントよろしくおねがいします。あの方は誰ですか？わっと同郵政アハハ毎日毎日よろしくおねがいしますあなたは今何を感じて何を考えていますか？間違いを間違いと見抜ける人じゃないと"
+        -# - if message.content.present?
+        -#   %p.Message__content
+        -#     = message.content
+        -# = image_tag message.image.url, class: 'Message__image' if message.image.present?
+
+.Message__box__center__text
+  .Message__box__center__text__content
+    .Comment-image
+      = icon("far fa-envelope-open",class: "qicon")
+    .Comment-name
+      .Name 
+        = @user.name
+      .Time 
+        = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+    .Comment-text
+      .Textmessage
+        %p.Textmessage__content
+          = @message.content
+        -#   %p.Message__content
+        -#     = message.content
+        -# = image_tag message.image.url, class: 'Message__image' if message.image.present?
