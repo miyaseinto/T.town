@@ -3,9 +3,7 @@ class MessagesController < ApplicationController
 
   def index
     @messages = Message.new
-    # @message = Message.find(:user)
-    # user = @message.user_id
-    # @user = User.find(user)
+    @message = Message.all
   end
 
   def create
@@ -21,7 +19,4 @@ class MessagesController < ApplicationController
     params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
   end
 
-  # def set_message
-  #   @message = Message.find(params[:id])
-  # end
 end

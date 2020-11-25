@@ -8,7 +8,7 @@
     .Message__box__text
       %span.explanation 行政に対しての相談等を入力してください！
     .Message__box__center
-      = render @message
+      = render 'message'
     .Message__box__bottom
       = form_with(model: @messages, local: true,class: "Form") do |f|
         .Form

@@ -44,20 +44,18 @@
       height: calc(100vh - 350px);
       padding: 0 10px;
       &__text{
-        margin-bottom: 46px;
+        margin-bottom: 30px;
         padding:10px 0px 0px 15px;
-        &__content{
-          display: flex;
-          position: relative;
-          .Comment-image{
-            color: #38aef0;
-            font-size: 50px;
-          }
+        display: flex;
+        max-width: 830px;
+        .Comment-image{
+          color: #38aef0;
+          font-size: 50px;
+        }
+        &__info{
           .Comment-name{
             display: flex;
-            padding-bottom: 12px;
             .Name{
-              color: #333333;
               font-size: 18px;
               padding-left: 15px;
               color: #38aef0;
@@ -69,15 +67,13 @@
             }
           }
           .Comment-text{
-            position: absolute;
-            top:25px;
-            left: 70px;
-            flex-direction: column;
+            padding-left: 15px;
             color: #434A54;
             font-size: 14px;
           }
           .Message__image{
-            height: 300px;
+            height: auto;
+            max-width: 100%;
           }
           .Textmessage{
             font-size: 15px;
