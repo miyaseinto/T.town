@@ -21,7 +21,6 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      console.log(data)
       let html = buildHTML(data);
       $('.Wrapper__content__show__comment__list').append(html);
       $('.textbox').val('');

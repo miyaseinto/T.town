@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :tweets
   has_many :comments
   has_many :likes
+  has_many :messages
 
   with_options presence: true do |assoc|
     assoc.validates :name

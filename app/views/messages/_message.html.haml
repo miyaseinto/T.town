@@ -1,0 +1,18 @@
+- @message.each do |message|
+  .Message__box__center__text
+    - if message.user.name == "町民"
+      = image_tag "Q.jpg",class: "Comment-image"
+    - else
+      .Comment-image
+        = image_tag "A.jpg",class: "Comment-image"
+    .Message__box__center__text__info
+      .Comment-name
+        .Name 
+          = message.user.name
+        .Time 
+          = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+      .Comment-text
+        .Textmessage
+          %p.Textmessage__content
+            = message.content
+          = image_tag message.image.url, class: 'Message__image' if message.image.present?
