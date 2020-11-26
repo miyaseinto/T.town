@@ -1,11 +1,10 @@
 - @message.each do |message|
   .Message__box__center__text
     - if message.user.name == "町民"
-      .Comment-image
-        = icon("far fa-envelope",class: "qicon")
+      = image_tag "Q.jpg",class: "Comment-image"
     - else
       .Comment-image
-        = icon("far fa-envelope-open",class: "qicon")
+        = image_tag "A.jpg",class: "Comment-image"
     .Message__box__center__text__info
       .Comment-name
         .Name 

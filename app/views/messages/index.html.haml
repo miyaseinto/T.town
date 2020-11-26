@@ -10,7 +10,7 @@
     .Message__box__center
       = render 'message'
     .Message__box__bottom
-      = form_with(model: @messages, local: true,class: "Form") do |f|
+      = form_with(model: @messages, local: true,class: "Form",id: "new_message") do |f|
         .Form
           .Form__input
             = f.text_field :content, class: 'Form__inputContent', placeholder: 'メッセージ入力'

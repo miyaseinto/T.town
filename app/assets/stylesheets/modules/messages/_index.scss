@@ -15,7 +15,7 @@
     margin: 30px auto;
     width: 40vw;
     height: 80vh;
-    background-color: #fafafa;
+    background-color: white;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 60px 0px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 16px;
@@ -42,15 +42,14 @@
       top: 80px;
       overflow: scroll;
       height: calc(100vh - 350px);
-      padding: 0 10px;
+      padding: 0 20px;
       &__text{
         margin-bottom: 30px;
         padding:10px 0px 0px 15px;
         display: flex;
         max-width: 830px;
         .Comment-image{
-          color: #38aef0;
-          font-size: 50px;
+          width: 50px;
         }
         &__info{
           .Comment-name{

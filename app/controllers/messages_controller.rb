@@ -9,7 +9,10 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     if @message.save
-      redirect_to messages_path
+      respond_to do |format|
+        format.html
+        format.json
+      end
     else
       render :index
     end

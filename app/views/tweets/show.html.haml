@@ -34,7 +34,6 @@
                 = tag
         .show-image
           = image_tag @tweet.image.url,class:"show-image1" if @tweet.image.present?
-          -# = image_tag("sora1.jpg",class:"show-image1")
         .show-text
           = icon("fas fa-pen", class: "text-icon")
           %span.show-text 内容
