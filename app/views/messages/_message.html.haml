@@ -1,7 +1,8 @@
 - @message.each do |message|
   .Message__box__center__text
     - if message.user.name == "町民"
-      = image_tag "Q.jpg",class: "Comment-image"
+      .Comment-image
+        = image_tag "Q.jpg",class: "Comment-image"
     - else
       .Comment-image
         = image_tag "A.jpg",class: "Comment-image"
