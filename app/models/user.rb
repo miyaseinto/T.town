@@ -10,7 +10,13 @@ class User < ApplicationRecord
   has_many :messages
 
   with_options presence: true do |assoc|
-    assoc.validates :name
+    assoc.validates :name 
+    assoc.validates :email
+    assoc.validates :password
+  end
+
+  with_options uniqueness: true do |assoc|
+    assoc.validates :email
   end
 
   def self.guest
@@ -19,5 +25,7 @@ class User < ApplicationRecord
     end
   end
 
+  validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i },inclusion: { in: %w(soumu@taiji.town jyuumin@taiji.town sanken@taiji.town kyouiku@taiji.town), message: "%{value} is invalid" }
+  validates :password, length: { minimum: 6 }, format: { with: /(?=.*\d+.*)(?=.*[a-zA-Z]+.*)./ }
 
 end
