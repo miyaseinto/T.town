@@ -48,12 +48,20 @@
         padding:10px 0px 0px 15px;
         display: flex;
         max-width: 830px;
-        .Comment-image{
-          width: 50px;
+        &__question{
+          font-size: 50px;
+          color: #38aef0;
+          font-family: 'Georgia';
+        }
+        &__anser{
+          font-size: 50px;
+          color: #FF0000;
+          font-family: 'Georgia';
         }
         &__info{
           .Comment-name{
             display: flex;
+            padding-top: 10px;
             .Name{
               font-size: 18px;
               padding-left: 15px;

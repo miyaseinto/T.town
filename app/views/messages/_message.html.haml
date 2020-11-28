@@ -1,11 +1,9 @@
 - @message.each do |message|
   .Message__box__center__text
     - if message.user.name == "町民"
-      .Comment-image
-        = image_tag "Q.jpg",class: "Comment-image"
+      %span.Message__box__center__text__question Q
     - else
-      .Comment-image
-        = image_tag "A.jpg",class: "Comment-image"
+      %soan.Message__box__center__text__anser A
     .Message__box__center__text__info
       .Comment-name
         .Name 

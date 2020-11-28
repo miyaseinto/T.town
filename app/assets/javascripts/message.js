@@ -3,112 +3,97 @@ $(function(){
     if ( message.image ) {
       if (message.user_name == "町民"){
         let html =
-          `<div class=".Message__box__center">
-            <div class=".Message__box__center__text">
-              <div class="Comment-image">
-                <img class="Comment-image" src="/assets/Q.jpg">
-              </div>
-              <div class="Message__box__center__text__info">
-                <div class="Comment-name">
-                  <div class="Name">
-                    ${message.user_name}
-                  </div>
-                  <div class="Time">
-                    ${message.created_at}
-                  </div>
+          `<div class="Message__box__center__text">
+              <span class="Message__box__center__text__question">Q</span>
+            <div class="Message__box__center__text__info">
+              <div class="Comment-name">
+                <div class="Name">
+                  ${message.user_name}
                 </div>
-                <div class="Comment-text">
-                  <div class="Textmessage">
-                    <p class="Textmessage__content">
-                      ${message.content}
-                    </p>
-                      <img class="Message__image" src="${message.image}">
-                  </div>
+                <div class="Time">
+                  ${message.created_at}
                 </div>
               </div>
-            </div> 
+              <div class="Comment-text">
+                <div class="Textmessage">
+                  <p class="Textmessage__content">
+                    ${message.content}
+                  </p>
+                    <img class="Message__image" src="${message.image}">
+                </div>
+              </div>
+            </div>
           </div>`
         return html;
       }else if(message.user_name != "町民"){
         let html =
-          `<div class=".Message__box__center">
-            <div class=".Message__box__center__text">
-              <div class="Comment-image">
-                <img class="Comment-image", src="/assets/A.jpg">
-              </div>
-              <div class="Message__box__center__text__info">
-                <div class="Comment-name">
-                  <div class="Name">
-                    ${message.user_name}
-                  </div>
-                  <div class="Time">
-                    ${message.created_at}
-                  </div>
+          `<div class="Message__box__center__text">
+              <span class="Message__box__center__text__anser">A</span>
+            <div class="Message__box__center__text__info">
+              <div class="Comment-name">
+                <div class="Name">
+                  ${message.user_name}
                 </div>
-                <div class="Comment-text">
-                  <div class="Textmessage">
-                    <p class="Textmessage__content">
-                      ${message.content}
-                    </p>
-                      <img class="Message__image" src="${message.image}">
-                  </div>
+                <div class="Time">
+                  ${message.created_at}
                 </div>
               </div>
-            </div> 
+              <div class="Comment-text">
+                <div class="Textmessage">
+                  <p class="Textmessage__content">
+                    ${message.content}
+                  </p>
+                    <img class="Message__image" src="${message.image}">
+                </div>
+              </div>
+            </div>
           </div>`
         return html;
     }} else {
       if (message.user_name == "町民"){
         let html =
-          `<div class=".Message__box__center">
-            <div class=".Message__box__center__text">
-              <div class="Comment-image">
-                <img class="Comment-image", src="/assets/Q.jpg">
-              </div>
-              <div class="Message__box__center__text__info">
-                <div class="Comment-name">
-                  <div class="Name">
-                    ${message.user_name}
-                  </div>
-                  <div class="Time">
-                    ${message.created_at}
-                  </div>
+          `<div class="Message__box__center__text">
+              <span class="Message__box__center__text__question">Q</span>
+            <div class="Message__box__center__text__info">
+              <div class="Comment-name">
+                <div class="Name">
+                  ${message.user_name}
                 </div>
-                <div class="Comment-text">
-                  <div class="Textmessage">
-                    <p class="Textmessage__content">
-                      ${message.content}
-                    </p>
-                  </div>
+                <div class="Time">
+                  ${message.created_at}
                 </div>
               </div>
-            </div> 
+              <div class="Comment-text">
+                <div class="Textmessage">
+                  <p class="Textmessage__content">
+                    ${message.content}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>`
         return html;
       }else if(message.user_name != "町民"){
         let html =
-          `<div class=".Message__box__center">
-            <div class=".Message__box__center__text">
-              <img class="Comment-image", src="/assets/A.jpg">
-              <div class="Message__box__center__text__info">
-                <div class="Comment-name">
-                  <div class="Name">
-                    ${message.user_name}
-                  </div>
-                  <div class="Time">
-                    ${message.created_at}
-                  </div>
+          `<div class="Message__box__center__text">
+              <span class="Message__box__center__text__anser">A</span>
+            <div class="Message__box__center__text__info">
+              <div class="Comment-name">
+                <div class="Name">
+                  ${message.user_name}
                 </div>
-                <div class="Comment-text">
-                  <div class="Textmessage">
-                    <p class="Textmessage__content">
-                      ${message.content}
-                    </p>
-                      <img class="Message__image" src="${message.image}">
-                  </div>
+                <div class="Time">
+                  ${message.created_at}
                 </div>
               </div>
-            </div> 
+              <div class="Comment-text">
+                <div class="Textmessage">
+                  <p class="Textmessage__content">
+                    ${message.content}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>`
         return html;
     }};
@@ -137,5 +122,4 @@ $(function(){
       $('.Form__submit').prop("disabled", false);
     })
   })
-  $('.Message__box__center').animate({ scrollTop: $('.Message__box__center')[0].scrollHeight});
 });
