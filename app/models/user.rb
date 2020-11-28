@@ -25,7 +25,7 @@ class User < ApplicationRecord
     end
   end
 
-  validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i },inclusion: { in: %w(soumu@taiji.town jyuumin@taiji.town sanken@taiji.town kyouiku@taiji.town), message: "%{value} is invalid" }
+  validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i },inclusion: { in: %w(soumu@taiji.town jyuumin@taiji.town sanken@taiji.town kyouiku@taiji.town guest@example.com), message: "%{value} is invalid" }
   validates :password, length: { minimum: 6 }, format: { with: /(?=.*\d+.*)(?=.*[a-zA-Z]+.*)./ }
 
 end
