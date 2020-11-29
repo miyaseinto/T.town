@@ -1,24 +1,14 @@
-# README
+# :whale2:T.town
+T.townは太地町の行政と太地町民との間で行える行政相談（チャットサービス）及び、町のお知らせを掲載するサービスです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![トップページ](https://gyazo.com/0c57dcad8d5accd5ea80aca6a68501d2)
 
-Things you may want to cover:
+<br />
 
-* Ruby version
+## :globe_with_meridians: URL
+URL: https://54.150.184.7
 
-* System dependencies
+※町民として利用する場合、トップページの右上にある:bust_in_silhouette:をクリックしログイン画面に遷移した後、「町民専用アカウント」のボタンをクリックすると、フォームに文字を入力せずにログインできます。（一応、行政がホストで利用する運用を考えているため、町民アカウントで利用する場合は、お知らせを投稿をすることができません。）
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## :thought_balloon: 制作背景
+前職の太地町役場で勤務を
