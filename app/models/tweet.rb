@@ -1,5 +1,4 @@
 class Tweet < ApplicationRecord
-
   belongs_to :user
   has_many :comments
   has_many :likes, dependent: :destroy
@@ -27,6 +26,4 @@ class Tweet < ApplicationRecord
 
   geocoded_by :address
   after_validation :geocode, if: :address_changed?
-
-
 end

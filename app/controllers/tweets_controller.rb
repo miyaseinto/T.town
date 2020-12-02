@@ -1,13 +1,11 @@
 class TweetsController < ApplicationController
-  before_action :set_tweet, only: [:edit, :show, :update, :destroy]
+  before_action :set_tweet, only: %i[edit show update destroy]
 
   def index
     @tweets = Tweet.all
     @tags = Tweet.all_tags.order("taggings_count DESC").pluck(:name)
 
-    if params[:tag_name]
-      @tweets = Tweet.tagged_with("#{params[:tag_name]}")
-    end
+    @tweets = Tweet.tagged_with(params[:tag_name].to_s) if params[:tag_name]
   end
 
   def new
@@ -30,8 +28,7 @@ class TweetsController < ApplicationController
     @comments = @tweet.comments.includes(:user)
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @tweet.update(tweet_params)
@@ -58,6 +55,7 @@ class TweetsController < ApplicationController
   end
 
   private
+
   def tweet_params
     params.require(:tweet).permit(:name, :tag_list, :image, :text, :address, :latitude, :longitude).merge(user_id: current_user.id)
   end
@@ -66,4 +64,3 @@ class TweetsController < ApplicationController
     @tweet = Tweet.find(params[:id])
   end
 end
-

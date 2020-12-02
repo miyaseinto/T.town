@@ -1,3 +1,5 @@
-class Users::RegistrationsController < Devise::RegistrationsController
-  before_action :check_guest, only: %i[update destroy]
+module Users
+  class RegistrationsController < Devise::RegistrationsController
+    before_action :check_guest, only: %i[update destroy]
+  end
 end
