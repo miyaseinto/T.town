@@ -1,12 +1,10 @@
 class LikesController < ApplicationController
-
-  before_action :set_tweet, only: [:create, :destroy]
+  before_action :set_tweet, only: %i[create destroy]
 
   def create
     like = Like.create(user_id: current_user.id, tweet_id: @tweet.id)
     like.save
     @tweets = Tweet.all
-
   end
 
   def destroy
