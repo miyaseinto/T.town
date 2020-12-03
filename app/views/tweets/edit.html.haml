@@ -6,14 +6,15 @@
       %h2.title 投稿を編集
     .Wrapper__inner__tweet
       = form_with(model: @tweet, local: true) do |f|
+        = render 'layouts/error_message',model: f.object
         .tweet-name
           タイトル
           %span.indispensable 必須
-        = f.text_field :name, class:"tweet-text"
+        = f.text_field :name, class:"tweet-text", placeholder:"40文字以内の入力"
         .tweet-name
           タグ
           %span.any 任意
-          %span.comma ※スペースかカンマで区切ってください
+          %span.comma ※カンマで区切ってください
         = f.text_field :tag_list, value: @tweet.tag_list.join(','), class: "tweet-text"
         .tweet-name
           投稿画像
@@ -26,7 +27,7 @@
         .tweet-name
           内容
           %span.indispensable 必須
-        = f.text_area :text ,class:"tweet-text1"
+        = f.text_area :text ,class:"tweet-text1", placeholder:"40文字以内の入力"
         .tweet-submit
           = f.submit "投稿" ,class:"sell-btn"
 

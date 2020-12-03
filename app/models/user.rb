@@ -25,6 +25,7 @@ class User < ApplicationRecord
     end
   end
 
-  validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }, inclusion: { in: %w[soumu@taiji.town jyuumin@taiji.town sanken@taiji.town kyouiku@taiji.town guest@example.com], message: "%{value} is invalid" }
-  validates :password, length: { minimum: 6 }, format: { with: /(?=.*\d+.*)(?=.*[a-zA-Z]+.*)./ }
+  validates :name, inclusion: {in: %w[総務課 住民福祉課 産業建設課 教育委員会 町民], message: "%{value} は無効です"}
+  validates :email, inclusion: { in: %w[soumu@taiji.town jyuumin@taiji.town sanken@taiji.town kyouiku@taiji.town guest@example.com], message: "%{value} is invalid" }
+  validates :password, length: { minimum: 6 }
 end
