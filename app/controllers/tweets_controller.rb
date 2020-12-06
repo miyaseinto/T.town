@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :set_tweet, only: %i[edit show update destroy]
+  before_action :set_tweet, only: [:edit, :show, :update, :destroy]
 
   def index
     @tweets = Tweet.all
@@ -28,7 +28,8 @@ class TweetsController < ApplicationController
     @comments = @tweet.comments.includes(:user)
   end
 
-  def edit; end
+  def edit
+  end
 
   def update
     if @tweet.update(tweet_params)
