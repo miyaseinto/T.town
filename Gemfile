@@ -32,6 +32,11 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails', '~> 4.0.0.beta2'
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
   gem 'faker', "~> 2.8"
