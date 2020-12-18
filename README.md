@@ -67,10 +67,14 @@ URL: http://54.150.184.7
 - RuboCop
 
 ### 本番環境
-- AWS(VPC、EC2、S3、Route53、ACM、ALB)  
+- AWS(VPC、EC2、S3、Route53) 
 - Nginx、Unicorn
 
 <br />
 
 ## :closed_book:ER図
 ![Image from Gyazo](https://i.gyazo.com/ab5438d5405ef6e6fece172122a48ca6.png)
+
+
+## :orange_book:インフラ図
+![Image from Gyazo](https://i.gyazo.com/afbb6850269c97204b8b4a81db1a53dc.png)
