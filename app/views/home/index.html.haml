@@ -1,6 +1,6 @@
 = render 'header'
 
-%section.main1
+%section.main
   = image_tag("k.png",class:"main-logo")
 
 .Content
@@ -8,8 +8,12 @@
     %iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26586.566909663303!2d135.92496761614328!3d33.596978313455814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600616560323ec03%3A0x1fc88aa9bdb5b140!2z5ZKM5q2M5bGx55yM5p2x54mf5amB6YOh5aSq5Zyw55S6!5e0!3m2!1sja!2sjp!4v1605447556541!5m2!1sja!2sjp" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0")
   .Content__text 
     %h2.Content__text__name T.townとは？
-    %p.Content__text__box 
-      和歌山県東牟婁郡太地町
-    %span.boxtext このアプリケーションは私が、太地町で勤務していた際に不憫に思っていたものを形にしたアプリケーションです。私は、太地町の総務課で防災業務を主に業務を行っておりました。その他の業務で町の住民の方々に町のお知らせ及び広報紙等を配る
-
+    .Content__text__box 
+      %p.Content__text__box-text 　T.townのTとは太地町のことを指し和歌山県の南端に位置する和歌山県で一番小さな町です。クジラの町と言われるほどの捕鯨文化があり、その歴史は400年近くの歴史があります。
+      %p.Content__text__box-text 　そんな太地町で勤めていた際に、不便に思う箇所がありました。その不便を解消するためにこのアプリを作成しました。
+      %p.Content__text__box-use ~　使用想定　~
+      %p.Content__text__box-text 行政と町民との間で使うことを想定しておりますので、ゲストログインでログインする場合は町民専用アカウントととして考えており、一般ログインは行政アカウントで各課（総務課、住民福祉課、産業建設課、教育委員会）によってログインします。
+      %p.Content__text__box-use ~　趣　　旨　~
+      %p.Content__text__box-text 行政側からのお知らせ（回覧）等を行政アカウントで投稿します。それに関して閲覧及びコメント等を町民アカウントで行えます。又、行政相談を行えるようにチャットを行政アカウントと町民アカウントの間で使用できます。
+      %p.Content__text__box-text ※ポートフォリですので、ゲストログイン（町民専用）でも投稿できる仕様にしております。
 = render 'footer'
