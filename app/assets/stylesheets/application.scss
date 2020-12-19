@@ -12,3 +12,15 @@
 @import "modules/users/show";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+@import "responsives/header";
+@import "responsives/footer";
+@import "responsives/home/index";
+@import "responsives/messages/index";
+@import "responsives/tweets/index";
+@import "responsives/tweets/form";
+@import "responsives/tweets/new";
+@import "responsives/tweets/show";
+@import "responsives/tweets/edit";
+@import "responsives/tweets/error_message";
+@import "responsives/users/show";

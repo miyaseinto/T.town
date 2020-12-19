@@ -1,0 +1,44 @@
+@media screen and (max-width: 980px){
+  .Message{
+    &__box{
+      width: 100%;
+      &__text{
+        .explanation{
+          font-size: 35px;
+        }
+      }
+      &__center{
+        height: calc(100vh - 500px);
+        &__text{
+          &__info{
+            .Comment-name{
+              .Name{
+                font-size: 25px;
+              }
+              .Time{
+                font-size: 20px;
+              }
+            }
+            .Textmessage{
+              font-size: 30px;
+            }
+          }
+        }
+      }
+      &__bottom{
+        height:120px;
+        .Form{
+          &__input{
+            font-size: 40px;
+              .fa-image {
+                font-size: 40px;
+              }
+          }
+          &__submit{
+            font-size: 40px;
+          }
+        }
+      }
+    }
+  }
+}

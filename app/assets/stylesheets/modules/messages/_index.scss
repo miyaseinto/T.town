@@ -48,15 +48,13 @@
         padding:10px 0px 0px 15px;
         display: flex;
         max-width: 830px;
+        font-size: 50px;
+        font-family: 'Georgia';
         &__question{
-          font-size: 50px;
           color: #38aef0;
-          font-family: 'Georgia';
         }
         &__anser{
-          font-size: 50px;
           color: #FF0000;
-          font-family: 'Georgia';
         }
         &__info{
           .Comment-name{
@@ -143,8 +141,7 @@
   }
 }
 img.Comment-image{
-  width: 50px;
-  
+  width: 50px; 
   position: relative;
   top:0;
   left: 0;

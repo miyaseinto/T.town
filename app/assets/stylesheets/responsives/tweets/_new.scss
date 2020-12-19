@@ -1,0 +1,22 @@
+@media screen and (max-width: 980px){
+  .Wrapper{
+    &__inner{
+      &__title{
+        font-size:  50px;
+      }
+      &__tweet{
+        width: 800px;
+        .tweet-name{
+          font-size: 40px;
+        }
+        .sell-btn{
+          width: 400px;
+          font-size: 40px;
+        }
+        .gest-btn{
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}

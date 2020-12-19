@@ -1,0 +1,26 @@
+
+@media screen and (max-width: 980px){
+  .top-page-header{
+    height: 250px;
+    align-items: center;
+  }
+  .header-logo{
+    padding: 0 auto;
+  }
+  .t-icon{
+    width: 80px;
+  }
+  .logo{
+    font-size: 60px;
+  }
+  .content ul li{
+    background-color: #f0f0f0;
+    width: 300px;
+    font-size: 40px;
+  }
+  .content{
+    .icon{
+      font-size: 80px;
+    }
+  }
+}

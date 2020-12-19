@@ -15,8 +15,7 @@
   justify-content: center;
   align-items: center;
   .main-logo{
-    height:55vh;
-    width: 60vw;
+    width: 1000px;
     opacity: 0.5;
   }
 } 
@@ -24,14 +23,13 @@
 .Content{
   margin: 20px 20px;
   background: #c4dbec;
-  padding: 5vh 5vw;
+  padding: 80px ;
   display: flex;
   justify-content: center;
   &__text{
     margin-top: 80px;
     padding: 20px 60px;
-    width: 35vw;
-    height: 55vh;
+    width: 807px;
     background-color: white;
     &__name{
       text-align: center;
@@ -66,8 +64,8 @@
 }
 
 iframe{
-  height: 45vh;
-  width: 48vw;
+  height: 490px;
+  width: 807px;
   box-shadow: 1px 10px 10px rgba(0,0,0,0.2);
 }
 
