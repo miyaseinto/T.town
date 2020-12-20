@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, except: :update
-
+  before_action :move_to_index
   def show
     user = User.find(params[:id])
     @name = user.name
@@ -27,5 +27,11 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:id, :name, :email, :profile_image)
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to root_path
+    end
   end
 end
