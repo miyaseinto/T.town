@@ -1,20 +1,15 @@
 @media screen and (max-width: 980px){
-  .Tweet{
-    padding: 1vh 3vw;
-    &__text{
-      font-size: 60px;
-    }
-    &__content{
-      flex-direction: column;
-      height: calc(100vh - 10px);
-      &__left{
-        width: 100%;
-        margin-top: 100px;
-        &__text{
-          font-size: 40px;
+  .Tweet__content__right__tweet{
+    .Form__right{
+      &__name{
+        font-size: 35px;
+      }
+      &__text{
+        font-size: 20px;
+        .text-name{
+          width: 12%;
         }
       }
-
     }
   }
 }

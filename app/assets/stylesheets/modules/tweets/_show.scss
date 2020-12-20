@@ -35,13 +35,6 @@
         font-size: 20px;
         color: rgb(121, 121, 121);
       }
-      .contributor-image{
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        background-position: center ;
-      }
-      
     }
     &__right{
       width: 40%;
@@ -71,18 +64,17 @@
         margin-bottom: 5px;
         border-radius: 10%;
         text-decoration: none;
-        margin-right: 5px;
+        margin-right: 20px;
         text-align: center;
         }
       }
       .show-image{
-
         .show-image1{
           width: 80%;
           border-radius: 8%;
           background-position: center ;
           text-align: center;
-          margin: 20px 0 10px 0;
+          margin: 40px 0 10px 0;
         }
       }
       .show-text{
