@@ -1,10 +1,10 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:edit, :show, :update, :destroy]
   before_action :move_to_index
-  
+
   def index
     @tweets = Tweet.all
-    @tags = Tweet.all_tags.order("taggings_count DESC").pluck(:name)
+    @tags = Tweet.all_tags.order('taggings_count DESC').pluck(:name)
 
     @tweets = Tweet.tagged_with(params[:tag_name].to_s) if params[:tag_name]
   end
@@ -67,8 +67,6 @@ class TweetsController < ApplicationController
   end
 
   def move_to_index
-    unless user_signed_in?
-      redirect_to root_path
-    end
+    redirect_to root_path unless user_signed_in?
   end
 end

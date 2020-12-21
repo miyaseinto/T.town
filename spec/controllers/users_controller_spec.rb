@@ -7,10 +7,10 @@ describe UsersController do
     before do
       get :show, params: { id: user }
     end
-    it "user詳細の際のインスタンス変数が正しく渡された" do
+    it 'user詳細の際のインスタンス変数が正しく渡された' do
       expect(assigns(:user)).to eq user
     end
-    it "userのshow画面に遷移できた" do
+    it 'userのshow画面に遷移できた' do
       expect(response).to render_template :show
     end
   end
@@ -19,12 +19,11 @@ describe UsersController do
     before do
       get :edit, params: { id: user }
     end
-    it "user編集の際のインスタンス変数が正しく渡された" do
+    it 'user編集の際のインスタンス変数が正しく渡された' do
       expect(assigns(:user)).to eq user
     end
-    it "userのedit画面に遷移できた" do
+    it 'userのedit画面に遷移できた' do
       expect(response).to render_template :edit
     end
   end
-
 end
