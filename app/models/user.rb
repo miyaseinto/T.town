@@ -20,12 +20,12 @@ class User < ApplicationRecord
   end
 
   def self.guest
-    find_or_create_by!(email: 'guest@example.com', name: "町民") do |user|
+    find_or_create_by!(email: 'guest@example.com', name: '町民') do |user|
       user.password = SecureRandom.urlsafe_base64
     end
   end
 
-  validates :name, inclusion: {in: %w[総務課 住民福祉課 産業建設課 教育委員会 町民], message: "%{value} は無効です"}
-  validates :email, inclusion: { in: %w[soumu@taiji.town jyuumin@taiji.town sanken@taiji.town kyouiku@taiji.town guest@example.com], message: "%{value} is invalid" }
+  validates :name, inclusion: { in: %w[総務課 住民福祉課 産業建設課 教育委員会 町民], message: '%{value} は無効です' }
+  validates :email, inclusion: { in: %w[soumu@taiji.town jyuumin@taiji.town sanken@taiji.town kyouiku@taiji.town guest@example.com], message: '%{value} is invalid' }
   validates :password, length: { minimum: 6 }
 end
