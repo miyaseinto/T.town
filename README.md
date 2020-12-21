@@ -51,6 +51,11 @@ https://gyazo.com/c17eda8d0775d9aea2ed4ca7d32c2119
 :large_blue_diamond:行政相談のチャット画面です。行政側と町民側でアイコンを変えております。又、入力時間の表記もしておりますので、記録メモのミス等を回避することができます。
 ![Image from Gyazo](https://i.gyazo.com/292d05f5e4ea038981c1c8abf0f49ef2.jpg)
 
+### スマホ対応画面一覧
+|メッセージ一覧|投稿一覧|投稿詳細|
+|---|---|---|
+|![Image from Gyazo](https://i.gyazo.com/6aa29d8bf385138d2c4d9c52683d6b59.png)|![Image from Gyazo](https://i.gyazo.com/29b27833d09233fdd1d9f8c79b55c19e.png)|![Image from Gyazo](https://i.gyazo.com/9f07e4473dec68d682ae245593032480.png)|
+
 
 ## :green_book:機能一覧
 
