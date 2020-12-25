@@ -17,7 +17,7 @@
       .Tweet__content__left__tag
         - @tags.each do |tag|
           = link_to tweets_path(tag_name: tag),class:"tag" do
-            %span.tag
+            %span.tag-name
               = tag
     .Tweet__content__right
       .Tweet__content__right__text
