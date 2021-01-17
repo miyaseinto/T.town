@@ -10,7 +10,7 @@
   &__content{
     display: flex;
     justify-content: center;
-    height: calc(100vh - 60px);
+    height: calc(100% - 60px);
     &__left{
       width: 30vw;
       padding: 5px 70px;
@@ -71,4 +71,30 @@
       }
     }
   }
+}
+.pagination{
+  color: #ff8c00;
+  margin-top: 30px;
+  font-size: 30px;
+  text-align: center;
+}
+.page a{
+  text-decoration: none;
+  color: #99ccf2;
+}
+.next a{
+  text-decoration: none;
+  color: #99ccf2;
+}
+.last a{
+  text-decoration: none;
+  color: #99ccf2;
+}
+.prev a{
+  text-decoration: none;
+  color: #99ccf2;
+}
+.first a{
+  text-decoration: none;
+  color: #99ccf2;
 }

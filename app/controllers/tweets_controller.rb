@@ -3,7 +3,7 @@ class TweetsController < ApplicationController
   before_action :move_to_index
 
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.all.all.page(params[:page]).per(3).order('updated_at DESC')
     @tags = Tweet.all_tags.order('taggings_count DESC').pluck(:name)
 
     @tweets = Tweet.tagged_with(params[:tag_name].to_s) if params[:tag_name]
