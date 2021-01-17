@@ -90,3 +90,5 @@ gem "gmaps4rails"
 gem "dotenv-rails"
 
 gem 'acts-as-taggable-on', '~> 6.0'
+
+gem 'kaminari'
