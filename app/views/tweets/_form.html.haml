@@ -1,5 +1,6 @@
-.Tweetdate
-  - @tweets.each do |tweet|
+- if @tweettag.present?
+  .Tweetdate
+  - @tweettag.each do |tweet|
     = link_to tweet_path(tweet.id),method: :get,class:"tweet" do
       .Tweet__content__right__tweet
         .Form__left
@@ -15,4 +16,23 @@
             %h2.text-name 内容：
             .content
               = tweet.text 
-  = paginate @tweets
+- else
+  .Tweetdate
+    - @tweets.each do |tweet|
+      = link_to tweet_path(tweet.id),method: :get,class:"tweet" do
+        .Tweet__content__right__tweet
+          .Form__left
+            = image_tag tweet.image.url,class:"tweetimage" if tweet.image.present?
+          .Form__right
+            .Form__right__name
+              = tweet.name
+            .Form__right__tag
+            %span.taglist タグ：
+            - tweet.tag_list.each do |tag|
+              = tag
+            .Form__right__text
+              %h2.text-name 内容：
+              .content
+                = tweet.text 
+    = paginate @tweets
+
