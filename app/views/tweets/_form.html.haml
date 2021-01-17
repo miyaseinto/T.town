@@ -13,7 +13,7 @@
           - tweet.tag_list.each do |tag|
             = tag
           .Form__right__text
-            %h2.text-name 内容：
+            .text-name 内容：
             .content
               = tweet.text 
 - else
@@ -31,7 +31,7 @@
             - tweet.tag_list.each do |tag|
               = tag
             .Form__right__text
-              %h2.text-name 内容：
+              .text-name 内容：
               .content
                 = tweet.text 
     = paginate @tweets
