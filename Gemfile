@@ -92,5 +92,3 @@ gem "dotenv-rails"
 gem 'acts-as-taggable-on', '~> 6.0'
 
 gem 'kaminari'
-
-gem 'bootstrap4-kaminari-views'
