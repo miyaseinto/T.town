@@ -77,7 +77,7 @@ end
 
 gem 'mini_magick'
 
-gem 'carrierwave'
+gem 'carrierwave', '2.1.1'
 
 gem 'fog-aws'
 
