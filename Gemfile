@@ -71,6 +71,7 @@ gem 'haml-rails'
 gem "font-awesome-sass"
 
 group :production do
+  gem 'rails_12factor'
   gem 'unicorn', '5.4.1'
 end
 
