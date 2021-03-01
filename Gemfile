@@ -97,3 +97,5 @@ gem 'kaminari'
 
 gem 'nokogiri', '1.11.0'
 
+gem 'uglifier', '~> 2.7'
+
