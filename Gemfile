@@ -94,3 +94,6 @@ gem "dotenv-rails"
 gem 'acts-as-taggable-on', '~> 6.0'
 
 gem 'kaminari'
+
+gem 'nokogiri', '1.11.0'
+
